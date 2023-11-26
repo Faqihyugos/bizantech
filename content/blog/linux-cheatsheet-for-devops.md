@@ -7,8 +7,6 @@ ogImagePath: "https://res.cloudinary.com/practicaldev/image/fetch/s--sRbO3Jwd--/
 date: 2023-11-22
 ---
 
-# Linux Cheat Sheet for DevOps Engineers
-
 Cheat Sheet ini mencakup perintah dan konsep penting Linux yang umum digunakan dalam alur kerja DevOps:
 
 ### File System Navigation:
