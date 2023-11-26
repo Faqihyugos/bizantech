@@ -11,6 +11,7 @@ date: 2023-11-22
 Cheat Sheet ini mencakup perintah dan konsep penting Linux yang umum digunakan dalam alur kerja DevOps:
 
 ### File System Navigation:
+
 - `pwd` : Melihat direktori kerja saat ini.
 - `ls` : Melihat daftar file dan direktori di direktori saat ini.
   - `ls -l` : Melihat daftar file dan direktori dalam format panjang.
@@ -19,3 +20,21 @@ Cheat Sheet ini mencakup perintah dan konsep penting Linux yang umum digunakan d
   - `cd ~` : Pindah ke direktori home.
   - `cd ..` : Naik satu tingkat direktori atau pindah ke direktori sebelum ini.
 - `touch` : Buat file kosong.
+- `mkdir` : Buat direktori baru.
+- `rm` : Hapus file atau direktori.
+  - `rm -r` : Hapus direktori secara rekursif.
+- `mv` : Memindahkan atau mengganti nama file dan direktori.
+- `cp` : Menyalin file dan direktori.
+- `find` : Mencari file dan direktori.
+- `grep` : Mencari teks di dalam file.
+- `cat` : Menampilkan isi file.
+- `more` atau `less` : Melihat konten file halaman demi halaman.
+- `head` dan `tail` : Menampilkan awal atau akhir file.
+- `file` : Tentukan jenis file.
+
+### File Permission:
+
+- `chmod` : Ubah izin file.
+- `chown` : Mengubah kepemilikan file.
+- `chgrp` : Ubah kepemilikan grup.
+- `umask` : Tetapkan izin default untuk file dan direktori baru.
