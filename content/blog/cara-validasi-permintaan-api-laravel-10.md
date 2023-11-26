@@ -2,6 +2,7 @@
 external: false
 draft: false
 title: "Cara Validasi Permintaan API di Laravel 10"
+ogImagePath: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*xhDwxi84D8MmrfAeqQ8bTg.jpeg"
 description: "Dalam pengembangan web, API (Application Programming Interface) menjadi salah satu hal yang sangat penting untuk memfasilitasi interaksi antara aplikasi yang berbeda-beda."
 date: 2023-04-11
 ---
