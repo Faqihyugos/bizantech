@@ -9,23 +9,23 @@ date: 2023-11-27
 
 Golang, juga dikenal sebagai Go, adalah bahasa pemrograman sumber terbuka yang dikembangkan oleh Google pada tahun 2009. Golang dirancang untuk menjadi bahasa yang sederhana, efisien, dan terukur untuk membangun sistem perangkat lunak berskala besar. Beberapa fitur utama Go meliputi:
 
-- Waktu kompilasi yang cepat
-- Pengumpulan sampah
-- Dukungan konkurensi melalui goroutine dan saluran
-- Pengetikan yang kuat dan keamanan mengetik
-- Sintaks yang sederhana dan bersih
+- Fast compilation times
+- Garbage collection
+- Concurrency support through goroutines and channels
+- Strong typing and type safety
+- A simple and clean syntax
 
 Berikut beberapa alasan mengapa Anda harus mempertimbangkan mempelajari Golang:
 
-1. Aplikasi berkinerja tinggi: Golang dirancang dengan mempertimbangkan kinerja, menjadikannya pilihan tepat untuk membangun aplikasi berkinerja tinggi. Ia memiliki kecepatan kompilasi yang cepat dan runtime yang dioptimalkan untuk perangkat keras modern.
+1. High-performance applications : Golang dirancang dengan mempertimbangkan kinerja, menjadikannya pilihan tepat untuk membangun aplikasi berkinerja tinggi. Ia memiliki kecepatan kompilasi yang cepat dan runtime yang dioptimalkan untuk perangkat keras modern.
 
-1. Konkurensi: Golang memiliki dukungan bawaan untuk konkurensi melalui goroutine dan salurannya. Hal ini memudahkan penulisan program secara bersamaan, seperti program yang menangani banyak permintaan atau tugas secara bersamaan.
+1. Concurrency : Golang memiliki dukungan bawaan untuk konkurensi melalui goroutine dan salurannya. Hal ini memudahkan penulisan program secara bersamaan, seperti program yang menangani banyak permintaan atau tugas secara bersamaan.
 
-1. Sistem berskala besar: Golang dirancang sebagai bahasa untuk membangun sistem berskala besar, dengan fitur seperti pengetikan yang kuat dan pengumpulan sampah yang membantu pengembang mengelola basis kode yang kompleks.
+1. Large-scale systems : Golang dirancang sebagai bahasa untuk membangun sistem berskala besar, dengan fitur seperti pengetikan yang kuat dan pengumpulan sampah yang membantu pengembang mengelola basis kode yang kompleks.
 
-1. Komunitas sumber terbuka: Golang memiliki komunitas sumber terbuka yang berkembang dan aktif, dengan banyak perpustakaan dan kerangka kerja yang tersedia untuk digunakan. Hal ini memudahkan untuk menemukan dan menggunakan kode yang ada untuk membangun aplikasi Anda sendiri.
+1. Open-source community : Golang memiliki komunitas sumber terbuka yang berkembang dan aktif, dengan banyak perpustakaan dan kerangka kerja yang tersedia untuk digunakan. Hal ini memudahkan untuk menemukan dan menggunakan kode yang ada untuk membangun aplikasi Anda sendiri.
 
-1. Dukungan lintas platform: Golang dapat dikompilasi untuk berbagai platform, termasuk Windows, macOS, dan Linux, menjadikannya bahasa serbaguna untuk membangun aplikasi yang dapat berjalan di berbagai sistem.
+1. Cross-platform support : Golang dapat dikompilasi untuk berbagai platform, termasuk Windows, macOS, dan Linux, menjadikannya bahasa serbaguna untuk membangun aplikasi yang dapat berjalan di berbagai sistem.
 
 Dalam penggunaan di dunia nyata, Golang telah digunakan oleh perusahaan seperti Google, Uber, Dropbox, dan Netflix untuk membangun sistem dan aplikasi berskala besar. Beberapa contoh aplikasi populer yang dibangun menggunakan Golang antara lain Docker, Kubernetes, dan Prometheus.
 
@@ -35,7 +35,7 @@ Dalam postingan blog ini, kami akan memandu langkah-langkah untuk menginstal Go 
 
 Sebelum kita dapat mulai coding di Go, kita perlu menginstalnya di komputer kita. Go dapat diinstal di Windows, macOS, dan Linux. Dalam tutorial ini, kami akan menggunakan macOS sebagai contoh sistem operasi kami.
 
-1. Pertama, kunjungi situs web resmi Go (https://golang.org/) dan unduh penginstal untuk sistem operasi Anda.
+1. Pertama, kunjungi situs web resmi Go (https://go.dev/) dan unduh penginstal untuk sistem operasi Anda.
 
 1. Setelah penginstal diunduh, buka dan ikuti petunjuk penginstalan.
 
@@ -59,8 +59,8 @@ func main() {
 ```
 
 1. Simpan file dan buka terminal Anda.
-1. Arahkan ke direktori tempat Anda menyimpan file hello.go.
-1. Ketik go run hello.go dan tekan Enter. Anda akan melihat pesan "Halo, Dunia!" ditampilkan di terminal.
+1. Arahkan ke direktori tempat Anda menyimpan file `hello.go`.
+1. Ketik `go run hello.go` dan tekan Enter. Anda akan melihat pesan "Halo, Dunia!" ditampilkan di terminal.
 
 Selamat, Anda telah berhasil menginstal Go di komputer Anda dan menulis program Go pertama Anda!
 
