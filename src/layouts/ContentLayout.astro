@@ -13,7 +13,8 @@ import ThemeScript from "./ThemeScript.astro";
 import Favicon from "./Favicon.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Disqus from "src/components/Disqus.astro";
+// import Disqus from "src/components/Disqus.astro";
+import PostComments from "src/components/PostComments.astro";
 
 export interface Props {
   title: string;
@@ -58,7 +59,8 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
         </h1>
         <time class="block mb-[2em] text-text-muted">{formattedDate}</time>
         <slot name="content" />
-        <Disqus />
+        <!-- <Disqus /> -->
+        <PostComments />
       </section>
     </main>
     <Footer />
