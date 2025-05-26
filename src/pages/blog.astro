@@ -21,59 +21,67 @@ const sortedPosts = posts
 
 <PageLayout>
   <PageMeta title={`Blog | ${SITE_TITLE}`} slot="meta" />
-  <section slot="main">
-    <ul>
-      {
-        sortedPosts.map((post) => {
-          const formattedDate = new Date(
-            post.frontmatter.date
-          ).toLocaleDateString("en-us", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          });
-          return (
-            <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start">
-              <div class="title">
-                {post.frontmatter.external ? (
-                  <a
-                    href={post.frontmatter.url}
-                    target="_blank"
-                    class="unset
-                        transition-[background-size] duration-300 
-                        bg-gradient-to-r bg-left-bottom bg-no-repeat
-                        bg-[length:0%_55%] hover:bg-[length:100%_55%] dark:bg-[length:0%_2px] hover:dark:bg-[length:100%_2px]
-                        from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
-                      "
-                  >
-                    <span>{post.frontmatter.title}</span>
-                    <span>
-                      <i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
+  <section slot="main" class="w-full sm:w-[75ch] mx-auto py-8">
+    <div class="flex flex-col sm:flex-row items-top gap-4">
+      <div class="w-full sm:px-2">
+        <div class="text-left pl-4 sm:pl-6">
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-slate-200 mb-2">
+            Blog
+          </h1>
+          <p class="text-gray-600 dark:text-slate-400">
+            Selamat datang di blog saya! Di sini, saya akan membagikan berbagai
+            topik seputar teknologi, pengembangan perangkat lunak, dan pengalaman
+            saya dalam industri ini. Saya berharap blog ini dapat menjadi sumber
+            inspirasi dan informasi bagi pembaca.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 p-2 sm:p-6">
+          {
+            sortedPosts.map((post) => {
+              const formattedDate = new Date(
+                post.frontmatter.date
+              ).toLocaleDateString("id-ID", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              });
+              return (
+                <article class="bg-white dark:bg-slate-600 shadow rounded-md">
+                  <a href={post.frontmatter.external ? post.frontmatter.url : `/blog/${post.slug}`}>
+                    <span class="block relative" style="padding-top: 52.4752%;">
+                      <img
+                        alt={post.frontmatter.title}
+                        src={post.frontmatter.ogImagePath || '/images/blogster.png'}
+                        class="rounded-t-md absolute inset-0 w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </span>
                   </a>
-                ) : (
-                  <a
-                    href={`/blog/${post.slug}`}
-                    class="unset
-                        transition-[background-size] duration-300 
-                        bg-gradient-to-r bg-left-bottom bg-no-repeat
-                        bg-[length:0%_55%] hover:bg-[length:100%_55%] dark:bg-[length:0%_2px] hover:dark:bg-[length:100%_2px]
-                        from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
-                      "
-                  >
-                    {post.frontmatter.title}
-                  </a>
-                )}
-              </div>
-              <div class="text-text-muted text-sm italic pt-1">
-                <time datetime={post.frontmatter.date.toISOString()}>
-                  {formattedDate}
-                </time>
-              </div>
-            </li>
-          );
-        })
-      }
-    </ul>
+                  <div class="p-2 pt-3">
+                    <p class="text-xs text-gray-600 dark:text-slate-300">
+                      <time datetime={post.frontmatter.date.toISOString()}>
+                        {formattedDate}
+                      </time>
+                    </p>
+                    <a
+                      class="py-2 cursor-pointer decoration-violet-400 dark:decoration-violet-500"
+                      href={post.frontmatter.external ? post.frontmatter.url : `/blog/${post.slug}`}
+                      target={post.frontmatter.external ? "_blank" : undefined}
+                    >
+                      <span class="block">
+                        <h2 class="text-xl  text-gray-700 dark:text-slate-300 font-bold">
+                          {post.frontmatter.title}
+                        </h2>
+                      </span>
+                    </a>
+                  </div>
+                </article>
+              );
+            })
+          }
+        </div>
+      </div>
+    </div>
   </section>
 </PageLayout>

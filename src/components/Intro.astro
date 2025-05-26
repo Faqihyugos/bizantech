@@ -27,8 +27,18 @@ const sortedPosts = posts
       </span>
     </h1>
     <p class="text-center text-2xl pb-4">
-      Software Developer. Blogger. dari Indonesia
+      Software Engineer. Blogger. dari Indonesia
     </p>
+  </div>
+  <div class="mb-5">
+      Saya Faqihyugos seorang software engineer yang berfokus pada pengembangan
+      aplikasi web dan mobile. Saya juga seorang blogger yang senang berbagi
+      pengetahuan dan pengalaman saya di bidang teknologi.
+      <br />
+      Di blog ini, saya akan membagikan berbagai topik seputar teknologi,
+      pengembangan perangkat lunak, dan pengalaman saya dalam industri ini.
+      Saya berharap blog ini dapat menjadi sumber inspirasi dan informasi bagi
+      pembaca.
   </div>
   <div>
     <ul>
@@ -36,7 +46,7 @@ const sortedPosts = posts
         sortedPosts.map((post) => {
           const formattedDate = new Date(
             post.frontmatter.date
-          ).toLocaleDateString("en-us", {
+          ).toLocaleDateString("id-ID", {
             year: "numeric",
             month: "short",
             day: "numeric",
