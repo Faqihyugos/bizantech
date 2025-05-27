@@ -2,6 +2,7 @@
 external: false
 title: "Vscode Extensions Html"
 date: 2022-06-08
+ogImagePath: "https://i.ytimg.com/vi/eC_5QPTPuaI/maxresdefault.jpg"
 draft: false
 tags: ["Vscode Extensions", "Vscode", "HTML"]
 ---

@@ -3,7 +3,7 @@ external: false
 draft: false
 title: Linux Cheat Sheet for DevOps Engineers.
 description: Linux Cheat Sheet.
-ogImagePath: "https://res.cloudinary.com/practicaldev/image/fetch/s--sRbO3Jwd--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/a80qvmnfan77kc8sjgf8.png"
+ogImagePath: "https://miro.medium.com/v2/resize:fit:1200/1*A-eofQmV8nvkabnhrRoMVw.png"
 date: 2023-11-22
 ---
 

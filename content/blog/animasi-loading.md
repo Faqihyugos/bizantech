@@ -3,7 +3,7 @@ external: false
 title: "Membuat animasi loading dengan SVG dan CSS"
 date: 2022-06-07
 draft: false
-ogImagePath: "https://dashboardsdesign.com/full-preview/"
+ogImagePath: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhH1ZAYnIZqV28L6f81JDt6f55FN08azQKvZg3OFc9lELIL09rPtHN6YoX2zKifRSQXow2qqqfjeVDZVfsmRYdfmNWPLwj3RO0ptS1tg7A9Cd_Ft29Vi3TNzcBi9QvCQ4d8H-eJj7X0Jgw6/s1600/animasi-loading+copy.png"
 description: "Halo , Kali ini Saya membagikan blog tentang animasi svg dengan css mungkin untuk yang sudah mahir dengan pemrograman css dan html bisa skip blog ini, hehe."
 ---
 
