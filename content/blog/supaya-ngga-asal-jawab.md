@@ -1,7 +1,7 @@
 ---
 external: false
 title: "Supaya Nggak Asal Jawab: Cara Meningkatkan Akurasi Model AI dengan RAG & Fine-Tuning"
-description: "Kalau kamu pakai **Azure AI Foundry**, kamu bisa memanfaatkan fitur **Prompt Flow** untuk membuat aplikasi chat yang terintegrasi dengan language model seperti GPT. Ini sudah cukup bagus untuk membuat aplikasi AI bisa ngobrol dan merespons input dari pengguna. Tapi, bagaimana kalau kamu ingin respons yang **lebih akurat, relevan, dan sesuai data** yang kamu miliki?"
+description: "Kalau kamu pakai Azure AI Foundry, kamu bisa memanfaatkan fitur Prompt Flow untuk membuat aplikasi chat yang terintegrasi dengan language model seperti GPT. Ini sudah cukup bagus untuk membuat aplikasi AI bisa ngobrol dan merespons input dari pengguna. Tapi, bagaimana kalau kamu ingin respons yang lebih akurat, relevan, dan sesuai data yang kamu miliki?"
 ogImagePath: "https://freeimghost.net/images/2025/05/28/model-optimization.md.png"
 date: 2025-05-28
 draft: false
@@ -15,7 +15,7 @@ Kalau kamu pakai **Azure AI Foundry**, kamu bisa memanfaatkan fitur **Prompt Flo
 
 Nah, di sinilah kita mulai masuk ke strategi optimasi. Yang paling mudah untuk dicoba adalah:
 
-### 🧠 1. **Prompt Engineering**
+### 🧠 1. Prompt Engineering
 
 Ini teknik dasar tapi sangat powerful. Kamu bisa mengubah cara kamu menyusun pertanyaan ke model, menyesuaikan *system message*, atau memberikan contoh format output yang diinginkan (dikenal juga sebagai **one-shot** atau **few-shot prompting**). Teknik ini cepat dan nggak butuh banyak persiapan.
 
@@ -23,7 +23,7 @@ Tapi kadang, meskipun kita sudah coba berbagai variasi prompt, hasilnya masih be
 
 ---
 
-### 🔍 2. **Retrieval-Augmented Generation (RAG)**
+### 🔍 2. Retrieval-Augmented Generation (RAG)
 
 RAG adalah teknik yang memungkinkan model **mengambil informasi dari sumber data tertentu** terlebih dahulu sebelum menjawab. Dengan kata lain, AI kamu bisa "lihat-lihat referensi" dulu sebelum bicara.
 
@@ -31,7 +31,7 @@ Contoh: Kamu bikin chatbot untuk layanan travel. Kamu ingin pelanggan bisa tanya
 
 ---
 
-### 🛠️ 3. **Fine-Tuning**
+### 🛠️ 3. Fine-Tuning
 
 Kalau kamu ingin AI yang **berperilaku sesuai gaya atau tone tertentu**, misalnya lebih sopan, formal, atau sesuai aturan organisasi, maka fine-tuning adalah jawabannya.
 
