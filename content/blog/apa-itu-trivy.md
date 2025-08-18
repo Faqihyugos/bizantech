@@ -4,6 +4,7 @@ draft: false
 title: Apa Itu Trivy dan Kenapa Jadi Andalan DevSecOps?
 description: Mengulik Trivy—tools open‑source ringan untuk scanning keamanan, mengecek container, IaC, secrets, sampai SBOM—dengan bahasa santai tapi tetap teknis dan enak dibaca.
 date: 2025-08-18
+ogImagePath: "https://trivy.dev/latest/imgs/trivy-k8s.png"
 --- 
 
 Kalau kamu pernah merasa aman-aman aja pas nge-build image, tapi tiba-tiba panik karena ada celah keamanan yang terlambat ketahuan—Trivy bisa jadi penyelamat kamu. Alat open-source dari **Aqua Security**, Trivy sekarang menjelma jadi favorit banyak tim DevSecOps karena **ringan, cepat, dan komprehensif** dalam menangkap banyak hal: mulai dari CVE di container, misconfig di IaC, sampai *secrets* yang tersembunyi. Jadi di artikel ini, kita bakal bongkar tuntas: apa itu Trivy, kenapa kegunaannya luas banget, bagaimana cara kerjanya, plus manfaat praktisnya dalam alur DevSecOps. Simak, ya!
