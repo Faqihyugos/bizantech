@@ -29,7 +29,7 @@ Singkatnya: Trivy adalah tools all-in-one buat nge-‘shift‑left’ keamanan d
 
 Trivy awalnya fokus ke scan container image aja. Tapi karena kebutuhan DevSecOps makin berkembang, ia berkembang juga—hingga sekarang juga bisa scan IaC, file lokal, Git repo, bahkan konfigurasi cloud native lainnya.
 
-Dalam praktik DevSecOps, prinsipnya sederhana: bawa keamanan masuk dari fase paling awal pengembangan (shift-left), bukan diakhir. Trivy cocok banget sama filosofi ini karena ringan, cepat, dan mudah diintegrasikan ke pipeline seperti GitHub Actions, Jenkins, GitLab CI, Azure DevOps, CircleCI, dan sebagainya :contentReference[oaicite:4]{index=4}.
+Dalam praktik DevSecOps, prinsipnya sederhana: bawa keamanan masuk dari fase paling awal pengembangan (shift-left), bukan diakhir. Trivy cocok banget sama filosofi ini karena ringan, cepat, dan mudah diintegrasikan ke pipeline seperti GitHub Actions, Jenkins, GitLab CI, Azure DevOps, CircleCI, dan sebagainya.
 
 ---
 
