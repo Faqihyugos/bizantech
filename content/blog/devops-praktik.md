@@ -4,6 +4,7 @@ draft: false
 title: "DevOps dan Praktik CI/CD: Teori dan Penerapan dengan Docker Pipeline"
 description: "Memahami konsep DevOps, prinsip CI/CD, dan bagaimana membangunnya secara praktis menggunakan Docker dalam pipeline modern."
 date: 2025-08-09
+ogImagePath: "https://media.geeksforgeeks.org/wp-content/uploads/20230410112114/DevOps.png"
 ---
 
 Di era software modern, kecepatan rilis dan stabilitas aplikasi bukan lagi kemewahan—itu keharusan. Nah, di sinilah **DevOps** dan **CI/CD** memainkan peran penting. Artikel ini akan bahas dari dasar: apa itu DevOps, bagaimana CI/CD bekerja, dan bagaimana kamu bisa membangun pipeline-nya sendiri menggunakan **Docker**.
