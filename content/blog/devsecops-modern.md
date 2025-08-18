@@ -1,9 +1,10 @@
 ---
 external: false
-draft: true
+draft: false
 title: "DevSecOps: Saat Keamanan Jadi Bagian Alami dari CI/CD"
 description: "Menyelami apa itu DevSecOps, prinsip shift-left, praktiknya dalam pipeline modern, dan kenapa tools seperti Trivy penting banget di dalamnya."
 date: 2025-08-13
+ogImagePath: "https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/stock-assets/getty/image/photography/10/a3/pulse5-0156.component.crop-2by1-xs-retina.ts=1753198109671.jpg/content/adobe-cms/us/en/think/topics/devsecops/jcr:content/root/leadspace_container/leadspace_article"
 ---
 
 
