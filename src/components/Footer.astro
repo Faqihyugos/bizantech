@@ -1,52 +1,55 @@
 ---
+const currentYear = new Date().getFullYear();
+const CV_URL = "https://resmume.com/resume/ZmFxaWh5dWdvc0BnbWFpbC5jb206MjcxNzU=/";
 ---
 
-<footer class="text-sm leading-[1.75] mt-4">
-  <div>
-    This blog is built with 
-    <a
-      class="unset gradient-link tracking-wider font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#f57111] to-[#f79605] hover:after:bg-gradient-to-r hover:after:from-[#f57111] hover:after:to-[#f79605]"
-      href={"https://github.com/flexdinesh/blogster"}
-      target="_blank"
-    >
-      Blogster</a> and hosted in
-    <a
-      class="unset gradient-link tracking-wider font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#00abda] to-[#1476ff] hover:after:bg-gradient-to-r hover:after:from-[#00abda] hover:after:to-[#1476ff]"
-      href={"https://vercel.com"}
-      target="_blank"
-    >
-      Vercel</a>.
+<footer class="py-8 mt-12 border-t border-border-code/40 text-xs text-text-muted">
+  <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div>
+      <p class="font-medium text-text-body">
+        © {currentYear} Faqih Yugo Susilo. Software Engineer.
+      </p>
+      <p class="mt-0.5">
+        Enterprise Applications, Backend Architecture & DevSecOps.
+      </p>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <a
+        href={CV_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="unset hover:text-primary-blue transition-colors inline-flex items-center gap-1 font-semibold text-primary-blue"
+        aria-label="CV / Resume Faqih Yugo Susilo"
+      >
+        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+        <span>CV</span>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/faqihyugos/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="unset hover:text-primary-blue transition-colors"
+        aria-label="Profil LinkedIn Faqih Yugo Susilo"
+      >
+        <i class="fa-brands fa-linkedin text-base" aria-hidden="true"></i>
+      </a>
+      <a
+        href="https://github.com/faqihyugos"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="unset hover:text-primary-blue transition-colors"
+        aria-label="Profil GitHub Faqih Yugo Susilo"
+      >
+        <i class="fa-brands fa-github text-base" aria-hidden="true"></i>
+      </a>
+      <a
+        href="/rss.xml"
+        class="unset hover:text-primary-blue transition-colors"
+        aria-label="RSS Feed Blog"
+      >
+        <i class="fa-solid fa-rss text-sm" aria-hidden="true"></i>
+      </a>
+    </div>
   </div>
 </footer>
-
-<style>
-  footer {
-    grid-area: footer;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .gradient-link {
-    position: relative;
-    box-decoration-break: clone;
-    text-decoration: none;
-  }
-
-  .gradient-link:hover:after {
-    transform: translateZ(0) scale(1);
-  }
-
-  .gradient-link:after {
-    left: 0;
-    right: 0;
-    bottom: -2px;
-    content: "";
-    height: 2px;
-    position: absolute;
-    transform: translateZ(0) scaleX(0);
-    transform-origin: left center;
-    transition: all 0.15s ease-in-out;
-  }
-</style>

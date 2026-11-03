@@ -1,0 +1,110 @@
+---
+const CV_URL = "https://resmume.com/resume/ZmFxaWh5dWdvc0BnbWFpbC5jb206MjcxNzU=/";
+
+const corePillars = [
+  {
+    title: "Aplikasi Enterprise & Pemerintahan",
+    description: "Pengalaman 4 tahun membangun dan mengelola sistem enterprise di instansi pemerintah (KPK RI).",
+  },
+  {
+    title: "Applied AI, RAG & LLM Studio",
+    description: "Implementasi ChatBot Aduan dengan RAG, Qdrant, dan setup vLLM model GPU (Qwen 3.8, Gemma 4).",
+  },
+  {
+    title: "Data Pipeline & Otomasi Sistem",
+    description: "Migrasi data via Pentaho PDI (mempercepat proses 30%) dan otomasi n8n untuk integrasi API gateway.",
+  },
+  {
+    title: "Multi-Stack Backend (.NET & Laravel)",
+    description: "Arsitektur API berstandar tinggi dengan ASP.NET Core, Laravel (PHP), Express.js, dan optimasi PostgreSQL.",
+  },
+];
+
+const skillGroups = [
+  {
+    category: "Backend",
+    items: ["Laravel (PHP)", ".NET Core (C#)", "Node.js (Express.js)", "Python"],
+  },
+  {
+    category: "AI & Data",
+    items: ["RAG Architecture", "Qdrant Vector DB", "LLM Studio", "vLLM (GPU)", "Pentaho PDI"],
+  },
+  {
+    category: "Frontend",
+    items: ["Blade", "Vue.js", "jQuery", "Blazor", "Tailwind CSS"],
+  },
+  {
+    category: "Database",
+    items: ["PostgreSQL (Optimasi Kueri)", "MySQL"],
+  },
+  {
+    category: "DevOps & Tools",
+    items: ["Docker", "Git / GitHub", "CI/CD", "n8n Automation", "Syncfusion"],
+  },
+];
+---
+
+<section class="mb-6 p-5 sm:p-6 rounded-xl border border-border-code/80 bg-bg-body shadow-sm">
+  <div class="flex items-center justify-between mb-4">
+    <h3 class="text-xl font-bold text-text-heading">Profil Profesional</h3>
+    <a
+      href={CV_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="unset text-xs font-semibold text-primary-blue hover:underline inline-flex items-center gap-1"
+    >
+      <i class="fa-solid fa-file-pdf"></i>
+      <span>Download CV Resmi</span>
+      <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+    </a>
+  </div>
+
+  <div class="text-sm text-text-body space-y-4 leading-relaxed">
+    <p class="text-base text-text-bold">
+      Full-Stack Engineer dengan pengalaman 4 tahun dalam membangun, mengoptimalkan, dan mengelola aplikasi enterprise serta integrasi sistem di instansi pemerintah.
+    </p>
+
+    <p>
+      Menguasai <strong class="text-text-bold">Laravel</strong>, <strong class="text-text-bold">.NET</strong>, 
+      <strong class="text-text-bold">Python</strong>, serta teknologi AI modern seperti 
+      <strong class="text-text-bold">RAG</strong>, <strong class="text-text-bold">Qdrant</strong>, dan 
+      <strong class="text-text-bold">LLM Studio</strong>. Berhasil mengoptimalkan pipeline chatbot sehingga waktu pemrosesan berkurang sebesar 30%. Berpengalaman mengembangkan API, data pipeline, integrasi lintas sistem, dan deployment berbasis Docker dengan standar keamanan tinggi.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+      {corePillars.map((pillar) => (
+        <div class="p-3.5 rounded-lg bg-bg-code/20 border border-border-code/60">
+          <h4 class="text-xs font-bold text-text-heading mb-1 flex items-center gap-1.5">
+            <i class="fa-solid fa-check text-primary-blue text-xs"></i>
+            <span>{pillar.title}</span>
+          </h4>
+          <p class="text-xs text-text-muted leading-relaxed">
+            {pillar.description}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <div class="pt-3 border-t border-border-code/50">
+      <h4 class="text-xs font-semibold text-text-heading uppercase tracking-wider mb-2.5">
+        Keahlian & Penguasaan Teknologi (Sesuai CV)
+      </h4>
+      <div class="space-y-2">
+        {skillGroups.map((group) => (
+          <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 text-xs">
+            <span class="w-28 font-semibold text-text-bold flex-shrink-0">
+              {group.category}:
+            </span>
+            <div class="flex flex-wrap gap-1.5">
+              {group.items.map((item) => (
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-bg-code/30 border border-border-code text-text-body">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

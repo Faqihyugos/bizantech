@@ -1,0 +1,84 @@
+---
+const categories = [
+  {
+    name: "Backend & Bahasa",
+    description: "Pengembangan layanan web, arsitektur API, dan logika bisnis enterprise",
+    skills: [
+      { name: "Laravel", badge: "Utama" },
+      { name: "PHP", badge: "Utama" },
+      { name: "FastAPI", badge: "Utama" },
+      { name: "Python", badge: "Utama" },
+      { name: "Go (Golang)", badge: null },
+      { name: "Express.js", badge: null },
+    ],
+  },
+  {
+    name: "Database & Broker",
+    description: "Pemodelan data relasional, optimasi query, dan manajemen antrean",
+    skills: [
+      { name: "PostgreSQL", badge: "Utama" },
+      { name: "MySQL", badge: null },
+      { name: "Apache Kafka", badge: null },
+      { name: "Redis", badge: null },
+    ],
+  },
+  {
+    name: "DevOps & Tooling",
+    description: "Kontainerisasi, pipeline CI/CD, audit keamanan, dan spesifikasi API",
+    skills: [
+      { name: "Docker", badge: "Utama" },
+      { name: "GitLab CI/CD", badge: "Utama" },
+      { name: "Git", badge: "Utama" },
+      { name: "Linux Server", badge: null },
+      { name: "DevSecOps (Trivy)", badge: null },
+      { name: "OpenAPI / Swagger", badge: null },
+    ],
+  },
+  {
+    name: "Frontend & Integrasi",
+    description: "Antarmuka responsif dan integrasi client-side yang efisien",
+    skills: [
+      { name: "JavaScript", badge: "Utama" },
+      { name: "Tailwind CSS", badge: null },
+      { name: "RESTful APIs", badge: "Utama" },
+      { name: "HTML5 & CSS3", badge: null },
+    ],
+  },
+];
+---
+
+<section class="py-10 border-b border-border-code/40">
+  <div class="mb-6">
+    <div class="flex items-center gap-2 mb-1">
+      <span class="w-2.5 h-2.5 rounded-sm bg-primary-blue" aria-hidden="true"></span>
+      <h2 class="text-2xl font-bold text-text-heading">Keahlian & Ekosistem Teknologi</h2>
+    </div>
+    <p class="text-sm text-text-muted">
+      Teknologi dan perangkat kerja yang rutin digunakan dalam implementasi solusi teknis nyata.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {categories.map((category) => (
+      <div class="p-4 rounded-lg bg-bg-code/20 border border-border-code/60 flex flex-col justify-between">
+        <div>
+          <h3 class="text-base font-semibold text-text-heading mb-1">{category.name}</h3>
+          <p class="text-xs text-text-muted mb-3">{category.description}</p>
+        </div>
+        <div class="flex flex-wrap gap-2 pt-1">
+          {category.skills.map((skill) => (
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium bg-bg-body border border-border-code text-text-body">
+              <span>{skill.name}</span>
+              {skill.badge && (
+                <span class="text-[10px] px-1 py-0.2 rounded bg-primary-blue/15 text-primary-blue font-semibold">
+                  {skill.badge}
+                </span>
+              )}
+            </span>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+

@@ -20,46 +20,64 @@ const sortedProjects = projects
 ---
 
 <PageLayout>
-  <PageMeta title={`Projects | ${SITE_TITLE}`} slot="meta" />
-  <section slot="main">
-    <ul>
+  <PageMeta title={`Proyek | ${SITE_TITLE}`} slot="meta" />
+  <section slot="main" class="py-6">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-text-heading mb-2">
+        Proyek & Kode Sumber
+      </h1>
+      <p class="text-sm text-text-muted">
+        Koleksi aplikasi, repositori open source, dan modul perangkat lunak yang pernah saya bangun.
+      </p>
+    </div>
+
+    <div class="space-y-4">
       {
-        sortedProjects.map((project) => {
-          const formattedDate = new Date(
-            project.frontmatter.date
-          ).toLocaleDateString("en-us", {
+        sortedProjects.map((item) => {
+          const formattedDate = new Date(item.frontmatter.date).toLocaleDateString("id-ID", {
             year: "numeric",
             month: "short",
-            day: "numeric",
           });
           return (
-            <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start">
-              <div class="title">
-                <a
-                  href={project.frontmatter.url}
-                  target="_blank"
-                  class="unset
-                      transition-[background-size] duration-300 
-                      bg-gradient-to-r bg-left-bottom bg-no-repeat
-                      bg-[length:0%_55%] hover:bg-[length:100%_55%] dark:bg-[length:0%_2px] hover:dark:bg-[length:100%_2px]
-                      from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
-                    "
-                >
-                  <span>{project.frontmatter.title}</span>
-                  <span>
-                    <i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
-                  </span>
-                </a>
-              </div>
-              <div class="text-text-muted text-sm italic pt-1">
-                <time datetime={project.frontmatter.date.toISOString()}>
+            <article class="p-5 rounded-lg bg-bg-code/15 border border-border-code/70 hover:border-primary-blue/40 transition-colors">
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+                <h2 class="text-lg font-bold text-text-heading">
+                  <a
+                    href={item.frontmatter.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="unset hover:text-primary-blue inline-flex items-center gap-1.5 transition-colors"
+                  >
+                    <span>{item.frontmatter.title}</span>
+                    <i class="fa-solid fa-up-right-from-square text-xs text-text-muted" aria-hidden="true" />
+                  </a>
+                </h2>
+                <time class="text-xs text-text-muted font-mono" datetime={item.frontmatter.date.toISOString()}>
                   {formattedDate}
                 </time>
               </div>
-            </li>
+
+              {item.frontmatter.description && (
+                <p class="text-sm text-text-body leading-relaxed mb-4">
+                  {item.frontmatter.description}
+                </p>
+              )}
+
+              <div>
+                <a
+                  href={item.frontmatter.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="unset text-xs font-medium text-primary-blue hover:underline inline-flex items-center gap-1"
+                >
+                  <i class="fa-brands fa-github text-sm" aria-hidden="true" />
+                  <span>Kunjungi Repository GitHub</span>
+                </a>
+              </div>
+            </article>
           );
         })
       }
-    </ul>
+    </div>
   </section>
 </PageLayout>

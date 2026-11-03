@@ -1,0 +1,154 @@
+---
+import { MY_NAME } from "../config";
+const CV_URL = "https://resmume.com/resume/ZmFxaWh5dWdvc0BnbWFpbC5jb206MjcxNzU=/";
+---
+
+<section class="mb-6 rounded-xl border border-border-code/80 bg-bg-body overflow-hidden shadow-sm">
+  {/* Header Cover Banner */}
+  <div class="relative w-full h-36 sm:h-44 bg-gradient-to-r from-[#0B1528] via-[#102446] to-[#0D1F3C] text-white p-4 sm:p-6 flex flex-col justify-between overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    
+    <div class="relative z-10 flex items-center justify-between">
+      <div class="flex items-center gap-2 text-xs font-mono text-sky-300/80">
+        <i class="fa-solid fa-code text-sky-400"></i>
+        <span>faqihyugos.com</span>
+      </div>
+      
+      <div class="flex items-center gap-2 text-xs font-mono text-sky-200/90">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Open for Opportunities</span>
+      </div>
+    </div>
+
+    <div class="relative z-10">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-1">
+        Full-Stack <span class="text-sky-400">Engineer</span>
+      </h1>
+      <p class="text-xs sm:text-sm font-medium text-slate-300 tracking-wide">
+        Enterprise Applications, Systems Integration & Applied AI (RAG, LLM)
+      </p>
+      <p class="text-[11px] sm:text-xs text-sky-300/70 italic mt-0.5">
+        Laravel • ASP.NET Core • Python • RAG & Qdrant • Docker
+      </p>
+    </div>
+
+    <div class="absolute right-4 bottom-4 hidden sm:flex items-center gap-3 text-slate-400/60 text-lg">
+      <i class="fa-brands fa-laravel hover:text-red-400 transition-colors" title="Laravel"></i>
+      <i class="fa-brands fa-python hover:text-yellow-400 transition-colors" title="Python"></i>
+      <i class="fa-brands fa-docker hover:text-sky-400 transition-colors" title="Docker"></i>
+      <i class="fa-solid fa-database hover:text-blue-400 transition-colors" title="PostgreSQL"></i>
+    </div>
+  </div>
+
+  {/* Profile Information Bar */}
+  <div class="p-5 sm:p-6">
+    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-3">
+      <div>
+        <div class="flex items-center gap-2 mb-1">
+          <h2 class="text-2xl sm:text-3xl font-bold text-text-heading">
+            {MY_NAME}
+          </h2>
+          <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-500 text-white text-[10px]" title="Verified Profile">
+            <i class="fa-solid fa-check"></i>
+          </span>
+        </div>
+
+        <p class="text-base sm:text-lg font-medium text-text-body leading-snug">
+          Full-Stack Engineer | Enterprise Applications & Applied AI
+        </p>
+      </div>
+
+      <div class="sm:text-right text-xs space-y-1 text-text-muted flex-shrink-0">
+        <div class="flex sm:justify-end items-center gap-1.5">
+          <i class="fa-solid fa-landmark text-primary-blue text-[13px]"></i>
+          <span class="font-medium text-text-body">Komisi Pemberantasan Korupsi (KPK RI)</span>
+        </div>
+        <div class="flex sm:justify-end items-center gap-1.5">
+          <i class="fa-solid fa-graduation-cap text-primary-blue text-[13px]"></i>
+          <span class="font-medium text-text-body">STMIK JAKARTA STI&K (S1 Sistem Informasi)</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Location & Contact Row */}
+    <div class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-text-muted mb-4">
+      <span class="flex items-center gap-1">
+        <i class="fa-solid fa-location-dot text-primary-blue"></i>
+        Jakarta Selatan, Indonesia
+      </span>
+      <span>•</span>
+      <a
+        href="mailto:faqihyugos@gmail.com"
+        class="unset hover:text-primary-blue transition-colors flex items-center gap-1"
+      >
+        <i class="fa-solid fa-envelope text-primary-blue"></i>
+        <span>faqihyugos@gmail.com</span>
+      </a>
+      <span>•</span>
+      <span class="flex items-center gap-1">
+        <i class="fa-solid fa-phone text-primary-blue"></i>
+        <span>+62 857-7828-1801</span>
+      </span>
+      <span>•</span>
+      <a
+        href={CV_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="unset text-primary-blue font-semibold hover:underline inline-flex items-center gap-1"
+      >
+        <i class="fa-solid fa-file-pdf text-[11px]"></i>
+        <span>Lihat CV Online</span>
+      </a>
+    </div>
+
+    {/* Action buttons */}
+    <div class="flex flex-wrap items-center gap-2.5 pt-3 border-t border-border-code/40">
+      <a
+        href={CV_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="unset min-h-[44px] px-5 py-2 rounded-full font-semibold text-sm bg-blue-600 hover:bg-blue-700 text-white transition-colors inline-flex items-center gap-2 shadow-sm"
+      >
+        <i class="fa-solid fa-file-pdf text-sm"></i>
+        <span>Buka CV Lengkap</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/faqihyugos/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="unset min-h-[44px] px-4 py-2 rounded-full font-medium text-sm border border-border-code hover:bg-bg-code/60 text-text-bold transition-colors inline-flex items-center gap-2"
+      >
+        <i class="fa-brands fa-linkedin text-base text-[#0a66c2]"></i>
+        <span>LinkedIn</span>
+      </a>
+
+      <a
+        href="https://github.com/faqihyugos"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="unset min-h-[44px] px-4 py-2 rounded-full font-medium text-sm border border-border-code hover:bg-bg-code/60 text-text-bold transition-colors inline-flex items-center gap-2"
+      >
+        <i class="fa-brands fa-github text-base"></i>
+        <span>GitHub</span>
+      </a>
+
+      <a
+        href="/projects"
+        class="unset min-h-[44px] px-4 py-2 rounded-full font-medium text-sm border border-border-code hover:bg-bg-code/60 text-text-bold transition-colors inline-flex items-center gap-1.5"
+      >
+        <i class="fa-solid fa-diagram-project text-xs"></i>
+        <span>Proyek</span>
+      </a>
+
+      <a
+        href="/blog"
+        class="unset min-h-[44px] px-4 py-2 rounded-full font-medium text-sm border border-border-code hover:bg-bg-code/60 text-text-bold transition-colors inline-flex items-center gap-1.5"
+      >
+        <i class="fa-solid fa-newspaper text-xs"></i>
+        <span>Artikel</span>
+      </a>
+    </div>
+  </div>
+</section>

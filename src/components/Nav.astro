@@ -1,5 +1,6 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+const CV_URL = "https://resmume.com/resume/ZmFxaWh5dWdvc0BnbWFpbC5jb206MjcxNzU=/";
 ---
 
 <Fragment>
@@ -34,6 +35,18 @@ import HeaderLink from "./HeaderLink.astro";
           <li><HeaderLink href="/">Home</HeaderLink></li>
           <li><HeaderLink href="/blog">Blog</HeaderLink></li>
           <li><HeaderLink href="/projects">Projects</HeaderLink></li>
+          <li class="pt-2 border-t border-border-code/40">
+            <a
+              href={CV_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="unset hover:text-primary-blue inline-flex items-center gap-2 text-sm text-primary-blue"
+            >
+              <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+              <span>CV / Resume</span>
+              <i class="fa-solid fa-up-right-from-square text-xs" aria-hidden="true"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </section>

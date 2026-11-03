@@ -90,6 +90,24 @@
         scroll-behavior: smooth;
     }
 
+    a[href],
+    button,
+    summary,
+    select,
+    label[for] {
+        cursor: pointer;
+    }
+
+    :disabled,
+    [aria-disabled="true"] {
+        cursor: not-allowed;
+    }
+
+    :focus-visible {
+        outline: 2px solid rgb(var(--color-primary-blue));
+        outline-offset: 2px;
+    }
+
     h1,
     h2,
     h3,

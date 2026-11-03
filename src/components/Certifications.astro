@@ -1,0 +1,141 @@
+---
+const certifications = [
+  {
+    title: "Meta - Version Control",
+    issuer: "Coursera (Meta)",
+    period: "September 2024 - Sekarang",
+    url: "https://www.coursera.org/account/accomplishments/certificate/SJQKI17ISIGD",
+    description:
+      "Git, pengelolaan repositori kode, alur kerja kolaboratif tim, branch management, dan command line tooling.",
+    badge: "fa-brands fa-git-alt",
+  },
+  {
+    title: "Meta - Django Web Framework",
+    issuer: "Coursera (Meta)",
+    period: "Oktober 2024 - Sekarang",
+    url: "https://www.coursera.org/account/accomplishments/certificate/JYQKM58ASSSC",
+    description:
+      "Pengembangan web server modern, arsitektur data modeling relasional, view routing, dan penerapan keamanan web.",
+    badge: "fa-brands fa-python",
+  },
+  {
+    title: "Spec Driven Development using OpenAPI Spec",
+    issuer: "Dicoding Indonesia",
+    period: "Issued 2024",
+    url: null,
+    description:
+      "Perancangan kontrak API berstandar OpenAPI sebelum implementasi backend untuk menjaga konsistensi integrasi lintas platform.",
+    badge: "fa-solid fa-file-code",
+  },
+];
+
+const education = [
+  {
+    institution: "STMIK JAKARTA STI&K",
+    degree: "Strata-1 (S1) Sistem Informasi",
+    gpa: "IPK: 3.50 / 4.00",
+    location: "Jakarta, Indonesia",
+    description:
+      "Fokus pada Rekayasa Perangkat Lunak, Manajemen Basis Data, dan Arsitektur Sistem Informasi Enterprise.",
+  },
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+  {/* Sertifikasi */}
+  <section class="p-5 sm:p-6 rounded-xl border border-border-code/80 bg-bg-body shadow-sm flex flex-col justify-between">
+    <div>
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-xl font-bold text-text-heading">Sertifikasi Resmi</h3>
+        <i class="fa-solid fa-certificate text-primary-blue text-sm"></i>
+      </div>
+
+      <div class="space-y-3.5">
+        {certifications.map((cert) => (
+          <div class="p-3.5 rounded-lg bg-bg-code/20 border border-border-code/60">
+            <div class="flex items-start gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-primary-blue/15 text-primary-blue flex items-center justify-center flex-shrink-0 text-xs">
+                <i class={cert.badge}></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-start justify-between gap-1">
+                  <h4 class="text-sm font-bold text-text-heading leading-tight">
+                    {cert.title}
+                  </h4>
+                  {cert.url && (
+                    <a
+                      href={cert.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="unset text-primary-blue hover:underline text-[11px] font-medium flex items-center gap-1 flex-shrink-0"
+                      title="Verifikasi Sertifikat"
+                    >
+                      <span>Lihat</span>
+                      <i class="fa-solid fa-up-right-from-square text-[9px]"></i>
+                    </a>
+                  )}
+                </div>
+                <p class="text-xs text-primary-blue font-medium mt-0.5">
+                  {cert.issuer} • <span class="text-text-muted">{cert.period}</span>
+                </p>
+                <p class="text-xs text-text-body mt-1.5 leading-relaxed">
+                  {cert.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Pendidikan */}
+  <section class="p-5 sm:p-6 rounded-xl border border-border-code/80 bg-bg-body shadow-sm flex flex-col justify-between">
+    <div>
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-xl font-bold text-text-heading">Pendidikan</h3>
+        <i class="fa-solid fa-graduation-cap text-primary-blue text-sm"></i>
+      </div>
+
+      <div class="space-y-4">
+        {education.map((edu) => (
+          <div class="p-4 rounded-lg bg-bg-code/20 border border-border-code/60">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-lg bg-primary-blue/15 text-primary-blue flex items-center justify-center flex-shrink-0 text-sm">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-baseline justify-between gap-2">
+                  <h4 class="text-base font-bold text-text-heading leading-tight">
+                    {edu.institution}
+                  </h4>
+                  <span class="text-xs font-mono font-semibold text-primary-blue bg-primary-blue/10 px-2 py-0.5 rounded border border-primary-blue/20">
+                    {edu.gpa}
+                  </span>
+                </div>
+                <p class="text-xs font-semibold text-text-body mt-1">
+                  {edu.degree}
+                </p>
+                <p class="text-[11px] text-text-muted mt-0.5">
+                  {edu.location}
+                </p>
+                <p class="text-xs text-text-body mt-2 leading-relaxed">
+                  {edu.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+
+        <div class="p-3.5 rounded-lg border border-dashed border-border-code/80 text-xs text-text-muted space-y-1">
+          <p class="font-medium text-text-body">
+            Komitmen Pembelajaran Berkelanjutan
+          </p>
+          <p class="leading-relaxed">
+            Terus memperbarui keahlian di bidang kecerdasan buatan terapan, arsitektur backend berkinerja tinggi, dan otomatisasi infrastruktur cloud.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

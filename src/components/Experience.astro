@@ -1,0 +1,133 @@
+---
+const experiences = [
+  {
+    institution: "Komisi Pemberantasan Korupsi (KPK RI)",
+    role: "Tenaga Ahli Fullstack Programmer",
+    period: "Februari 2025 - Desember 2026",
+    location: "Jakarta Selatan",
+    type: "Tenaga Ahli",
+    bullets: [
+      "Mengembangkan ChatBot Aduan berbasis AI menggunakan Python, RAG, Qdrant, dan LLM Studio untuk mengotomasi penanganan aduan.",
+      "Bekerja sama lintas divisi untuk integrasi fitur dan penyusunan dokumentasi teknis sistem.",
+      "Membuat dan mengonfigurasi setup vLLM di server GPU dengan model Qwen 3.8 dan Gemma 4.",
+    ],
+    tech: ["Python", "RAG", "Qdrant", "LLM Studio", "vLLM", "GPU Server", "Docker"],
+    icon: "fa-solid fa-robot",
+  },
+  {
+    institution: "PT Optima Tech Indo",
+    role: "Fullstack .NET Internship",
+    period: "Oktober 2024 - Januari 2025",
+    location: "Remote",
+    type: "Internship",
+    bullets: [
+      "Mengembangkan API keuangan dengan menggunakan ASP.NET Core Web API, Entity Framework, dan PostgreSQL.",
+      "Membangun antarmuka manajemen pengguna berbasis Blazor dan komponen Syncfusion.",
+      "Mengoptimalkan struktur query untuk meningkatkan stabilitas API dan menurunkan tingkat kesalahan sebesar ±15%.",
+    ],
+    tech: ["ASP.NET Core", "C#", "Entity Framework", "PostgreSQL", "Blazor", "Syncfusion"],
+    icon: "fa-solid fa-code",
+  },
+  {
+    institution: "PT Bakri Karya Sarana",
+    role: "Tenaga Ahli Programmer",
+    period: "Januari 2024 - Desember 2024",
+    location: "Penempatan KPK RI",
+    type: "Tenaga Ahli",
+    bullets: [
+      "Membuat pipeline migrasi data dengan Pentaho Data Integration yang berhasil mempercepat proses migrasi data sebesar ±30%.",
+      "Mengelola dan mengembangkan API gateway serta otomasi proses di server on-premises menggunakan n8n untuk aplikasi DB Protection BSSN.",
+    ],
+    tech: ["Pentaho PDI", "n8n", "API Gateway", "BSSN DB Protection", "On-Premises Server"],
+    icon: "fa-solid fa-gears",
+  },
+  {
+    institution: "PT Artha Kreasi Utama",
+    role: "Tenaga Ahli Programmer",
+    period: "Januari 2023 - Desember 2023",
+    location: "Penempatan KPK RI",
+    type: "Tenaga Ahli",
+    bullets: [
+      "Mengembangkan rancangan wireframe dan modul aplikasi web Sinergi.",
+      "Membuat website master data dan dashboard pemeriksaan surat dinamis.",
+      "Mengimplementasikan gateway enkripsi keamanan data menggunakan framework Laravel.",
+      "Mengembangkan microsite API gateway ELHKPN berbasis Express.js.",
+    ],
+    tech: ["Laravel", "Express.js", "PHP", "Node.js", "Gateway Enkripsi", "ELHKPN"],
+    icon: "fa-solid fa-shield-halved",
+  },
+  {
+    institution: "PT Prima Hijau Lestari",
+    role: "Support Programmer",
+    period: "Juli 2022 - Desember 2022",
+    location: "Penempatan KPK RI",
+    type: "Support Programmer",
+    bullets: [
+      "Memelihara aplikasi internal dan backoffice berbasis Laravel dan PostgreSQL untuk mendukung operasional harian institusi.",
+      "Membangun antarmuka website untuk pencatatan dan pengelolaan data barang rampasan menggunakan Express.js.",
+    ],
+    tech: ["Laravel", "PostgreSQL", "Express.js", "JavaScript"],
+    icon: "fa-solid fa-database",
+  },
+];
+---
+
+<section class="mb-6 p-5 sm:p-6 rounded-xl border border-border-code/80 bg-bg-body shadow-sm">
+  <div class="flex items-center justify-between mb-5">
+    <div>
+      <h3 class="text-xl font-bold text-text-heading">Pengalaman Kerja</h3>
+      <p class="text-xs text-text-muted mt-0.5">Rekam jejak profesional riil sesuai Curriculum Vitae (CV)</p>
+    </div>
+    <span class="text-xs font-mono text-primary-blue bg-primary-blue/10 px-2.5 py-1 rounded-md border border-primary-blue/20">
+      4 Tahun Pengalaman
+    </span>
+  </div>
+
+  <div class="relative pl-6 sm:pl-8 space-y-6 before:content-[''] before:absolute before:left-2 sm:before:left-3 before:top-2 before:bottom-2 before:w-0.5 before:bg-border-code">
+    {experiences.map((exp) => (
+      <div class="relative">
+        <div class="absolute -left-6 sm:-left-8 top-1 w-4 h-4 sm:w-6 sm:h-6 rounded-full bg-bg-body border-2 border-primary-blue flex items-center justify-center text-[10px] text-primary-blue shadow-sm">
+          <i class={exp.icon}></i>
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5">
+            <div>
+              <h4 class="text-base font-bold text-text-heading">
+                {exp.role}
+              </h4>
+              <p class="text-sm font-semibold text-primary-blue">
+                {exp.institution}
+              </p>
+            </div>
+            <span class="text-xs text-text-muted font-mono whitespace-nowrap">
+              {exp.period}
+            </span>
+          </div>
+
+          <div class="text-xs text-text-muted flex items-center gap-1.5 font-medium">
+            <span>{exp.location}</span>
+            <span>•</span>
+            <span class="text-text-bold">{exp.type}</span>
+          </div>
+
+          <ul class="text-xs sm:text-sm text-text-body space-y-1.5 pt-1 pl-4 list-disc marker:text-primary-blue">
+            {exp.bullets.map((bullet) => (
+              <li class="leading-relaxed">
+                {bullet}
+              </li>
+            ))}
+          </ul>
+
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            {exp.tech.map((skill) => (
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-bg-code/30 border border-border-code text-text-muted">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
