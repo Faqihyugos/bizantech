@@ -38,18 +38,25 @@ const sortedProjects = projects
             year: "numeric",
             month: "short",
           });
+          const isHttp = item.frontmatter.url.startsWith("http");
+          const isGithub = item.frontmatter.url.includes("github.com");
+
           return (
             <article class="p-5 rounded-lg bg-bg-code/15 border border-border-code/70 hover:border-primary-blue/40 transition-colors">
               <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
                 <h2 class="text-lg font-bold text-text-heading">
                   <a
                     href={item.frontmatter.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={isHttp ? "_blank" : "_self"}
+                    rel={isHttp ? "noopener noreferrer" : undefined}
                     class="unset hover:text-primary-blue inline-flex items-center gap-1.5 transition-colors"
                   >
                     <span>{item.frontmatter.title}</span>
-                    <i class="fa-solid fa-up-right-from-square text-xs text-text-muted" aria-hidden="true" />
+                    {isHttp ? (
+                      <i class="fa-solid fa-up-right-from-square text-xs text-text-muted" aria-hidden="true" />
+                    ) : (
+                      <i class="fa-solid fa-arrow-right text-xs text-text-muted" aria-hidden="true" />
+                    )}
                   </a>
                 </h2>
                 <time class="text-xs text-text-muted font-mono" datetime={item.frontmatter.date.toISOString()}>
@@ -63,16 +70,41 @@ const sortedProjects = projects
                 </p>
               )}
 
-              <div>
+              <div class="flex flex-wrap items-center gap-3">
                 <a
                   href={item.frontmatter.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="unset text-xs font-medium text-primary-blue hover:underline inline-flex items-center gap-1"
+                  target={isHttp ? "_blank" : "_self"}
+                  rel={isHttp ? "noopener noreferrer" : undefined}
+                  class="unset text-xs font-medium text-primary-blue hover:underline inline-flex items-center gap-1.5"
                 >
-                  <i class="fa-brands fa-github text-sm" aria-hidden="true" />
-                  <span>Kunjungi Repository GitHub</span>
+                  {isGithub ? (
+                    <>
+                      <i class="fa-brands fa-github text-sm" aria-hidden="true" />
+                      <span>Kunjungi Repository GitHub</span>
+                      <i class="fa-solid fa-up-right-from-square text-[10px]" aria-hidden="true" />
+                    </>
+                  ) : isHttp ? (
+                    <>
+                      <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true" />
+                      <span>Kunjungi Platform / Course</span>
+                    </>
+                  ) : (
+                    <>
+                      <i class="fa-solid fa-book-open text-xs" aria-hidden="true" />
+                      <span>Baca Dokumentasi & Arsitektur Lengkap</span>
+                    </>
+                  )}
                 </a>
+
+                {item.frontmatter.articleUrl && (
+                  <a
+                    href={item.frontmatter.articleUrl}
+                    class="unset text-xs font-medium text-text-muted hover:text-primary-blue hover:underline inline-flex items-center gap-1.5 border-l border-border-code/60 pl-3"
+                  >
+                    <i class="fa-solid fa-book-open text-xs" aria-hidden="true" />
+                    <span>Baca Artikel Pembahasan</span>
+                  </a>
+                )}
               </div>
             </article>
           );

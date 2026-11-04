@@ -13,6 +13,18 @@ const cvProjects = [
     externalUrl: null,
   },
   {
+    title: "Implementasi CI/CD & Multi-Node K3s Lokal",
+    category: "DevOps & Cloud Architecture",
+    period: "Lab Mandiri / Local Track",
+    description:
+      "Membangun arsitektur otomasi CI/CD & GitOps end-to-end lokal di laptop tanpa cloud: provisioning K3s via Terraform, custom Jenkins CI container dengan Trivy scanner, reconciler ArgoCD GitOps, dan Envoy Gateway API.",
+    tech: ["Kubernetes (K3s)", "Terraform", "Jenkins", "ArgoCD", "Envoy Gateway", "Trivy"],
+    badge: "Hands-on Lab",
+    externalUrl: "https://academy.naipospos.cloud/#/learn/local",
+    articleUrl: "/blog/arsitektur-cicd-kubernetes-lokal-k3s-jenkins-argocd",
+    linkLabel: "Referensi Track",
+  },
+  {
     title: "Sistem Pengelolaan Barang Bukti di Rupbasan KPK",
     category: "Fullstack Web Application",
     period: "Juli 2023 - Desember 2024",
@@ -20,16 +32,6 @@ const cvProjects = [
       "Aplikasi pengelolaan barang bukti dengan arsitektur fullstack (Laravel, Blade, jQuery). Mengintegrasikan RESTful API pihak ketiga secara realtime serta melakukan optimasi query PostgreSQL yang meningkatkan performa sebesar 25%.",
     tech: ["Laravel", "Blade", "jQuery", "PostgreSQL", "REST APIs"],
     badge: "Government System",
-    externalUrl: null,
-  },
-  {
-    title: "Web Aplikasi Pemanfaatan Aset Rampasan",
-    category: "Backend & API Architecture",
-    period: "Oktober 2022 - April 2023",
-    description:
-      "Penyediaan endpoint API untuk frontend dan dashboard pemantauan aset rampasan. Mengimplementasikan routing berkinerja tinggi, Eloquent ORM, dan pengamanan hak akses data aset institusional.",
-    tech: ["Laravel (PHP)", "PostgreSQL", "REST APIs", "Eloquent ORM"],
-    badge: "Backend & Data",
     externalUrl: null,
   },
   {
@@ -94,28 +96,51 @@ const cvProjects = [
 
           <div class="flex items-center justify-between text-xs text-text-muted">
             <span class="text-[11px] font-mono">{item.period}</span>
-            {item.externalUrl ? (
-              <a
-                href={item.externalUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="unset font-semibold text-primary-blue hover:underline inline-flex items-center gap-1 text-xs"
-              >
-                <i class="fa-brands fa-github"></i>
-                <span>GitHub</span>
-                <i class="fa-solid fa-up-right-from-square text-[9px]"></i>
-              </a>
-            ) : (
-              <a
-                href={CV_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="unset font-semibold text-primary-blue hover:underline inline-flex items-center gap-1 text-[11px]"
-              >
-                <span>Lihat di CV</span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
-              </a>
-            )}
+            <div class="flex items-center gap-2">
+              {item.externalUrl && (
+                <a
+                  href={item.externalUrl}
+                  target={item.externalUrl.startsWith("http") ? "_blank" : "_self"}
+                  rel={item.externalUrl.startsWith("http") ? "noopener noreferrer" : undefined}
+                  class="unset font-semibold text-primary-blue hover:underline inline-flex items-center gap-1 text-xs"
+                >
+                  {item.externalUrl.includes("github") ? (
+                    <>
+                      <i class="fa-brands fa-github"></i>
+                      <span>GitHub</span>
+                      <i class="fa-solid fa-up-right-from-square text-[9px]"></i>
+                    </>
+                  ) : (
+                    <>
+                      <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                      <span>{item.linkLabel || "Akses Platform"}</span>
+                    </>
+                  )}
+                </a>
+              )}
+
+              {item.articleUrl && (
+                <a
+                  href={item.articleUrl}
+                  class="unset text-[11px] font-medium text-text-muted hover:text-primary-blue hover:underline inline-flex items-center gap-1 border-l border-border-code/60 pl-2"
+                >
+                  <i class="fa-solid fa-book-open text-[10px]"></i>
+                  <span>Artikel</span>
+                </a>
+              )}
+
+              {!item.externalUrl && !item.articleUrl && (
+                <a
+                  href={CV_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="unset font-semibold text-primary-blue hover:underline inline-flex items-center gap-1 text-[11px]"
+                >
+                  <span>Lihat di CV</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </article>
