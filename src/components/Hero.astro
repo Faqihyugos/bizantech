@@ -5,38 +5,47 @@ const CV_URL = "https://resmume.com/resume/ZmFxaWh5dWdvc0BnbWFpbC5jb206MjcxNzU=/
 
 <section class="mb-6 rounded-xl border border-border-code/80 bg-bg-body overflow-hidden shadow-sm">
   {/* Header Cover Banner */}
-  <div class="relative w-full h-36 sm:h-44 bg-gradient-to-r from-[#0B1528] via-[#102446] to-[#0D1F3C] text-white p-4 sm:p-6 flex flex-col justify-between overflow-hidden">
-    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
+  <div class="relative w-full h-36 sm:h-44 bg-gradient-to-r from-[#071711] via-[#0d261c] to-[#071711] text-white p-4 sm:p-6 flex flex-col justify-between overflow-hidden">
+    {/* Tech matrix dot pattern */}
+    <div class="absolute inset-0 opacity-[0.14] bg-[radial-gradient(#bef265_1px,transparent_1px)] [background-size:16px_16px]"></div>
     
     <div class="relative z-10 flex items-center justify-between">
-      <div class="flex items-center gap-2 text-xs font-mono text-sky-300/80">
-        <i class="fa-solid fa-code text-sky-400"></i>
-        <span>faqihyugos.com</span>
+      <div class="flex items-center gap-2 text-xs font-mono text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
+        <i class="fa-solid fa-code text-[#bef265] text-sm"></i>
+        <span class="font-semibold tracking-wide text-white">faqihyugos.com</span>
       </div>
       
-      <div class="flex items-center gap-2 text-xs font-mono text-sky-200/90">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Open for Opportunities</span>
+      <div class="flex items-center gap-2 text-xs font-mono text-white bg-black/40 px-2.5 py-1 rounded-full border border-[#bef265]/30 shadow-sm drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
+        <span class="inline-block w-2 h-2 rounded-full bg-[#bef265] animate-pulse"></span>
+        <span class="font-medium text-white">Open for Opportunities</span>
       </div>
     </div>
 
     <div class="relative z-10">
-      <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-1">
-        Full-Stack <span class="text-sky-400">Engineer</span>
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-1 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+        Full-Stack <span class="text-[#bef265]">Engineer</span>
       </h1>
-      <p class="text-xs sm:text-sm font-medium text-slate-300 tracking-wide">
+      <p class="text-xs sm:text-sm font-semibold text-white tracking-wide drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
         Enterprise Applications, Systems Integration & Applied AI (RAG, LLM)
       </p>
-      <p class="text-[11px] sm:text-xs text-sky-300/70 italic mt-0.5">
-        Laravel • ASP.NET Core • Python • RAG & Qdrant • Docker
+      <p class="text-[11px] sm:text-xs text-[#e2fbd7] font-mono mt-1 font-semibold flex flex-wrap items-center gap-1.5 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
+        <span>Laravel</span>
+        <span class="text-[#bef265]">•</span>
+        <span>ASP.NET Core</span>
+        <span class="text-[#bef265]">•</span>
+        <span>Python</span>
+        <span class="text-[#bef265]">•</span>
+        <span>RAG & Qdrant</span>
+        <span class="text-[#bef265]">•</span>
+        <span>Docker</span>
       </p>
     </div>
 
-    <div class="absolute right-4 bottom-4 hidden sm:flex items-center gap-3 text-slate-400/60 text-lg">
+    <div class="absolute right-4 bottom-4 hidden sm:flex items-center gap-3 text-white/90 text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
       <i class="fa-brands fa-laravel hover:text-red-400 transition-colors" title="Laravel"></i>
       <i class="fa-brands fa-python hover:text-yellow-400 transition-colors" title="Python"></i>
-      <i class="fa-brands fa-docker hover:text-sky-400 transition-colors" title="Docker"></i>
-      <i class="fa-solid fa-database hover:text-blue-400 transition-colors" title="PostgreSQL"></i>
+      <i class="fa-brands fa-docker hover:text-[#bef265] transition-colors" title="Docker"></i>
+      <i class="fa-solid fa-database hover:text-[#bef265] transition-colors" title="PostgreSQL"></i>
     </div>
   </div>
 
@@ -48,7 +57,7 @@ const CV_URL = "https://resmume.com/resume/ZmFxaWh5dWdvc0BnbWFpbC5jb206MjcxNzU=/
           <h2 class="text-2xl sm:text-3xl font-bold text-text-heading">
             {MY_NAME}
           </h2>
-          <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-500 text-white text-[10px]" title="Verified Profile">
+          <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#bef265] text-slate-950 text-[10px] font-bold" title="Verified Profile">
             <i class="fa-solid fa-check"></i>
           </span>
         </div>
@@ -107,7 +116,7 @@ const CV_URL = "https://resmume.com/resume/ZmFxaWh5dWdvc0BnbWFpbC5jb206MjcxNzU=/
         href={CV_URL}
         target="_blank"
         rel="noopener noreferrer"
-        class="unset min-h-[44px] px-5 py-2 rounded-full font-semibold text-sm bg-blue-600 hover:bg-blue-700 text-white transition-colors inline-flex items-center gap-2 shadow-sm"
+        class="unset min-h-[44px] px-5 py-2 rounded-full font-bold text-sm bg-[#bef265] hover:bg-[#a3e635] text-slate-950 transition-colors inline-flex items-center gap-2 shadow-sm"
       >
         <i class="fa-solid fa-file-pdf text-sm"></i>
         <span>Buka CV Lengkap</span>
